@@ -1,0 +1,337 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+/* Top Navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+}
+
+.site-name {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+}
+
+.site-name:hover {
+    opacity: 0.7;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.nav-social-icon {
+    color: #ffffff;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.nav-social-icon:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0%;
+    filter: brightness(0.6);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #c0c0c0;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+/* Main Content */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* About Section */
+.about {
+    margin-bottom: 5rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about .lead {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #d0d0d0;
+    font-weight: 300;
+}
+
+.about-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-photos img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+}
+
+/* Music Section */
+.music {
+    margin-bottom: 5rem;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.music::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-image: url('img/guitars_cropped.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.45;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.music h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.album-card {
+    background-color: #151515;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.album-cover {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.album-card:hover .album-cover img {
+    transform: scale(1.05);
+}
+
+.album-card h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 1.5rem 1.5rem 1rem;
+    line-height: 1.4;
+    min-height: 80px;
+}
+
+.listen-link {
+    display: inline-block;
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.7rem 2rem;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #555;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+}
+
+.listen-link:hover {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+}
+
+/* Connect Section */
+.connect {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.social-icon {
+    color: #888;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+    transform: scale(1.15);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 3rem 1.5rem;
+    }
+
+    .about .lead {
+        font-size: 1.15rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .music h2 {
+        font-size: 2rem;
+    }
+
+    .album-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .social-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+}
