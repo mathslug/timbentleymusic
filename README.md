@@ -1,22 +1,21 @@
-# Tim Bentley Music Website
+# Tim Bentley Music
 
-This is a simple, static HTML/CSS website for Tim Bentley, folk singer-songwriter.
+Static site for Tim Bentley, folk singer-songwriter.
 
-## Structure
+## View locally
 
-- `index.html` - Single-page site with hero, about, music, and social links
-- `styles.css` - All styling for the website
-- `img/` - Contains album covers and photos
-- Various favicon and icon files for different platforms
+Open `index.html` in a browser, or run:
+```
+python3 -m http.server 8000
+```
+Then visit `http://localhost:8000`
 
-## Deployment
+## Deploy
 
-To deploy this website, just push to main on Github
+Push to main branch - GitHub Pages deploys.
 
-## Maintenance
+## Files
 
-To update the website:
-
-- Edit `index.html` to change text content or add new albums
-- Modify `styles.css` to adjust styling
-- Replace images in the `img/` folder as needed (maintain the same filenames)
+- `index.html` - main page
+- `styles.css` - styles
+- `img/` - images and album covers
